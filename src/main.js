@@ -1,7 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
+/**
+ * @fileoverview: main
+ * @author: burning <www.cafeinit.com>
+ * @version: 2016-11-06
+ */
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+import Vue from 'vue'
+import router from './router'
+
+const app = new Vue({
+  router
+}).$mount('#app')
