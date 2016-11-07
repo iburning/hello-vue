@@ -9,9 +9,11 @@ import VueRouter from 'vue-router'
 import Home from './home.vue'
 import User from './user.vue'
 
+import sellerRoutes from './routes/seller'
+
 Vue.use(VueRouter)
 
-const routes = [
+var routes = [
   { path: '/', component: Home },
   // { path: '/user', component: User },
   {
@@ -35,6 +37,9 @@ const routes = [
   // { path: '/foo', component: Foo },
   // { path: '/bar', component: Bar }
 ]
+
+routes = routes.concat(sellerRoutes)
+console.log('routes', routes)
 
 const router = new VueRouter({
   mode: 'history',
